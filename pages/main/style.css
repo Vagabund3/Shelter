@@ -2,29 +2,40 @@
  */
 
 @charset "UTF-8";
+
 @font-face {
     font-family: Georgia;
     src: url("../../assets/fonts/georgia.ttf");
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 * {
+    margin: 0px;
+    padding: 0px;
+    border: 0;
+}
+
+*, *:before, *:after {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
 }
 
-* {
-    margin: 0px;
-    padding: 0px;
-}
 
 a:link {
     text-decoration: none !important;
 }
 
 body {
-    min-height: 100vh;
+    display: block;
+    background: url(/assets/images/noise_transparent.png), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    min-height: 100%;
     min-width: 320px;
 }
 
@@ -33,7 +44,6 @@ body {
     display: flex;
     justify-content: space-between;
     max-width: 1280px;
-
     padding: 60px 40px;
     margin: 0 auto;
 }
@@ -41,9 +51,10 @@ body {
 
 .header {
     width: 100%;
-    position: absolute;
-    top: 6rem;
+    /*top: 6rem;*/
+
 }
+
 
 .header-logo {
     display: flex;
@@ -52,7 +63,7 @@ body {
     width: 185px;
     height: 60px;
 
-    text-align: center
+
 }
 
 .header-logo h1 {
@@ -62,35 +73,181 @@ body {
     line-height: 110%;
     letter-spacing: 0.06em;
     margin-bottom: 10px;
-
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+    text-align: center;
 }
 
 .header-logo p {
     font-family: Arial;
-    color: #ff0000;
+    color: #FFFFFF;
     font-size: 13px;
     font-weight: 400;
     line-height: 15px;
     letter-spacing: 0.1em;
-    margin: 10px 0.2rem 0 auto;
-    display: flex;
-    align-items: center;
+
+
 }
 
 
 .nav-menu {
     display: flex;
-    width: 443px
+    width: 443px;
+    margin-top: 16px;
 }
 
-.nav-links {
+.nav-list {
     display: flex;
     justify-content: space-between;
     padding: 0;
     width: 100%;
+    height: 27px;
     list-style-type: none;
 
 }
 
+.nav_menu_item {
+    display: flex;
+    align-items: center;
+}
+
+.nav_menu_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #CDCDCD;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.start_screen_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 728px;
+
+}
+
+.not_only_block {
+
+    width: 460px;
+    padding-top: 163px;
+}
+
+.not_only_block h2 {
+    display: flex;
+    width: 310px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 130%;
+    color: #FFFFFF;
+    margin-right: 150px;
+}
+
+.not_only_block p {
+    width: 460px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: #CDCDCD;
+    padding: 42px 0;
+    margin-right: 39px;
+}
+
+.btn_friend {
+    width: 207px;
+    height: 52px;
+    background: #F1CDB3;
+    border-radius: 100px;
+    transition-duration: 0.3s;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+    padding: 15px;
+    outline: none;
+}
+
+.btn_friend:hover {
+    cursor: pointer;
+    background-color: #FDDCC4;
+}
+
+.puppy_img {
+    background-image: url(../../assets/images/start-screen-puppy.png);
+    width: 698px;
+    height: 728px;
+    padding-left: 42px;
+}
+
+
+.about_content {
+    background: #FFFFFF;
+}
+
+.about_img {
+    width: 300px;
+    height: 408px;
+    background-image: url(../../assets/images/about-pets.png);
+}
+.about_content .wrapper{
+    display: flex;
+    padding: 80px 30px 100px 30px;
+    justify-content: center;
+    gap: 120px;
+}
+
+.about_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: 430px;
+    height: 380px;
+    row-gap: 25px;
+}
+
+.about_text h3 {
+    width: 370px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.about_text p {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #4C4C4C;
+ 
+}
+
+/*background: radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;*/
+
+
+/*.start_screen_content, header {*/
+/*    background: url(/assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);*/
+
+/*}*/
